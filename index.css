@@ -37,3 +37,19 @@
     width: 1000px;
     height: 30px;
 }
+
+.upbtn {
+    display: none;
+}
+
+.upbtn > i {
+    font-size: 70px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.upbtn > i:hover {
+    color: green;
+}

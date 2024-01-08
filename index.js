@@ -37,14 +37,14 @@ function searchMovies() {
     });
 }
 
-// 검색어 입력 input 요소에 이벤트 리스너 추가
-document.getElementById('searchInput').addEventListener('keydown', function (event) {
-  // Enter 키의 keyCode는 13
-  if (event.key === 'Enter') {
-    event.preventDefault(); // 기본 동작 막기
-    searchMovies(); // 검색 함수 호출
-  }
-});
+// // 검색어 입력 input 요소에 이벤트 리스너 추가
+// document.getElementById('searchInput').addEventListener('keydown', function (event) {
+//   // Enter 키의 keyCode는 13
+//   if (event.key === 'Enter') {
+//     event.preventDefault(); // 기본 동작 막기
+//     searchMovies(); // 검색 함수 호출
+//   }
+// });
 
 // 초기 데이터를 가져와 화면에 출력하는 함수
 function loadInitialData() {
@@ -75,9 +75,27 @@ function displayMovies(response) {
   });
 }
 
+const upbtns = document.querySelector('.upbtn');
+let scrolllength = 0;
+console.log(upbtns);
+window.addEventListener('scroll', function () {
+  scrolllength = window.scrollY;
+  // console.log(scrolllength);
 
-//검색결과가 있을땐 
+  if (scrolllength > 570) {
+    upbtns.style.display="block";
+  } else {
+    upbtns.style.display="none";
+  }
+});
 
+upbtns.addEventListener('click', function(){
+  window.scrollTo({
+    top:0,
+    left:0,
+    behavior: "smooth"
+  }); //매소드() 안에 객체(배열)
+});
 
 
 
