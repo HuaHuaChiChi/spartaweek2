@@ -1,0 +1,39 @@
+.title {
+    background-color: #008000;
+    height: 200px;
+
+    display: flex; /*타이틀 안에 있는 아이템들을 플렉스컨테이너로 묶음 */
+    flex-direction: column; /* 플렉스 아이템들을 전개하는 방식 row가로 column세로 */
+    align-items: center; /* 세로축에서 아이템을 정렬 */
+    justify-content: center; /* 가로축에서 아이템을 정렬 */
+}
+
+.title-button {
+    background-color: green;
+    font-size: 50px;
+    border: 2px aliceblue;
+    color: aliceblue;
+    border-color: aliceblue;
+}
+
+.title-add-btn {
+    background-color: green;
+    font-size: 20px;
+    border: 2px solid aliceblue;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative; /* 상대 위치 지정 */
+    z-index: 1; /* 층위 지정 */
+}
+
+.card-list {
+    width: 1300px;
+    margin: 30px auto 0px auto;
+}
+
+
+.form-control {
+    width: 1000px;
+    height: 30px;
+}
