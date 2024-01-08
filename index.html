@@ -16,16 +16,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <button id="refreshButton" type="button" class="title-button" onclick="location.reload();">스파르타 영화 명작</button>
         <div class="search">
-            <div class="form-floating">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="searchInput" placeholder="name@example.com">
-                    <label for="searchInput">제목 검색</label>
+            <form onsubmit="event.preventDefault(); searchMovies();">
+                <div class="form-floating">
+                    <div class="form-floating mb-3">
+                        <input autofocus type="text" class="form-control" id="searchInput" placeholder="영화 이름을 입력해주세요">
+                        <label for="searchInput">제목 검색</label>
+                    </div>
                 </div>
-            </div>
-            <button id="searchbtn" onclick="searchMovies()" class="title-add-btn">검색하기</button>
+                <button type="button" id="searchbtn" onclick="searchMovies()" class="title-add-btn">검색하기</button>
+            </form>
         </div>
+
     </div>
-    
+
     <div class="card-list">
         <div id="cards" class="row row-cols-1 row-cols-md-4 g-4">
             <!-- <div onclick="alert('dd')" class="col">

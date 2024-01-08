@@ -3,7 +3,7 @@ const options = {
   method: 'GET',
   headers: {
     accept: 'application/json',
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzAzNDY5NThiZTJiMjE1M2FjNWVkODYyYzU4YmUzNiIsInN1YiI6IjY1OTY4ZTFkYTZjMTA0MGY5YmZhN2FiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4LnQfu2xxKboKwvHT5uiyxiHhy9f4OCjx1Ipa8o1v00'
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMzAzNDY5NThiZTJiMjE1M2ZjNWVkODYyYzU4YmUzNiIsInN1YiI6IjY1OTY4ZTFkYTZjMTA0MGY5YmZhN2FiMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.4LnQfu2xxKboKwvHT5uiyxiHhy9f4OCjx1Ipa8o1v00'
   }
 };
 
@@ -15,7 +15,7 @@ window.onload = function () {
 // 영화 검색 함수
 function searchMovies() {
   const searchTerm = document.getElementById('searchInput').value;
-  const apiUrl = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1`;
+  const apiUrl = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
 
   fetch(apiUrl, options)
     .then(response => response.json())
@@ -36,6 +36,15 @@ function searchMovies() {
       console.error('에러 발생:', error);
     });
 }
+
+// 검색어 입력 input 요소에 이벤트 리스너 추가
+document.getElementById('searchInput').addEventListener('keydown', function (event) {
+  // Enter 키의 keyCode는 13
+  if (event.key === 'Enter') {
+    event.preventDefault(); // 기본 동작 막기
+    searchMovies(); // 검색 함수 호출
+  }
+});
 
 // 초기 데이터를 가져와 화면에 출력하는 함수
 function loadInitialData() {
