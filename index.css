@@ -64,6 +64,7 @@
     width: 305px;
     height: 850px;
     margin: 10px;
+    line-height: 24px;
     /* 카드 크기 지정하고 flex warp 잘 작동하는지 확인 */
 }
 
