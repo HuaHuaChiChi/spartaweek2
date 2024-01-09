@@ -40,12 +40,16 @@ api는 TMDB의 top rated 영화 목록을 가져와 사용하였습니다.
 ### 추가구현
 
 **자동스크롤**
+
 ![](https://velog.velcdn.com/images/ksksks102/post/66be63c5-7f2b-45cf-b7bf-2acc1beb4f4c/image.png)
 
 ![](https://velog.velcdn.com/images/ksksks102/post/c657518f-9389-4fdf-9e7b-5aec0d9291a5/image.png)
+
 스크롤의 길이를 감지해 상단으로 올라가게 만들어주는 버튼을 표시할 수 있게 만들어 주었다.
 버튼을 누르면 페이지의 최상단으로 이동한다.
 
 **포멧**
+
 ![](https://velog.velcdn.com/images/ksksks102/post/472ada88-ff7b-41d1-9c3a-0327739e0525/image.png)
+
 reset.css 파일을 추가해 어떤 브라우저에서도 동일한 페이지를 볼 수 있게 설정해놓았다.
