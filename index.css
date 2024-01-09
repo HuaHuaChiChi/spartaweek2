@@ -69,7 +69,9 @@
     /* 카드 크기 지정하고 flex warp 잘 작동하는지 확인 */
 }
 
-
+.col {
+    flex: none;
+}
 
 .upbtn {
     display: none;
