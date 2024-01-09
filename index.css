@@ -1,3 +1,5 @@
+
+
 .title {
     background-color: #008000;
     height: 200px;
@@ -6,6 +8,7 @@
     flex-direction: column; /* 플렉스 아이템들을 전개하는 방식 row가로 column세로 */
     align-items: center; /* 세로축에서 아이템을 정렬 */
     justify-content: center; /* 가로축에서 아이템을 정렬 */
+    flex-basis: auto;
 }
 
 .title-button {
@@ -27,16 +30,44 @@
     z-index: 1; /* 층위 지정 */
 }
 
-.card-list {
-    width: 1300px;
-    margin: 30px auto 0px auto;
-}
-
-
 .form-control {
-    width: 1000px;
     height: 30px;
+    display: flex;
+    flex-basis: auto;
 }
+
+.form-floating > input {
+    width: 1000px;
+}
+
+.searchform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: auto;
+}
+
+
+.card-list {
+    max-width: 1300px;
+    margin: 30px auto 30px auto;
+
+    display: flex; /*타이틀 안에 있는 아이템들을 플렉스컨테이너로 묶음 */
+    flex-direction: row; /* 플렉스 아이템들을 전개하는 방식 row가로 column세로 */
+    align-items: center; /* 세로축에서 아이템을 정렬 */
+    justify-content: center; /* 가로축에서 아이템을 정렬 */
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 305px;
+    height: 850px;
+    margin: 10px;
+    /* 카드 크기 지정하고 flex warp 잘 작동하는지 확인 */
+}
+
+
 
 .upbtn {
     display: none;

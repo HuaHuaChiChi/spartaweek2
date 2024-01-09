@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
-    <script defer src="./index.js"></script> 
+    <script defer src="./index.js"></script>
     <!-- defer 적자 꼭  -->
 </head>
 
@@ -18,12 +18,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <button id="refreshButton" type="button" class="title-button" onclick="location.reload();">스파르타 영화 명작</button>
         <div class="search">
-            <form onsubmit="event.preventDefault(); searchMovies();">
-                <div class="form-floating">
-                    <div class="form-floating mb-3">
-                        <input autofocus type="text" class="form-control" id="searchInput" placeholder="영화 이름을 입력해주세요">
-                        <label for="searchInput">제목 검색</label>
-                    </div>
+            <form class="searchform" onsubmit="event.preventDefault(); searchMovies();">
+                <div class="form-floating mb-3">
+                    <input autofocus type="text" class="form-control" id="searchInput" placeholder="영화 이름을 입력해주세요">
+                    <label for="searchInput">제목 검색</label>
                 </div>
                 <button type="button" id="searchbtn" onclick="searchMovies()" class="title-add-btn">검색하기</button>
             </form>
@@ -31,9 +29,8 @@
 
     </div>
 
-    <div class="card-list">
-        <div id="cards" class="row row-cols-1 row-cols-md-4 g-4">
-            <!-- <div onclick="alert('dd')" class="col">
+    <div class="card-list" id="cards">
+        <!-- <div onclick="alert('dd')" class="col">
                 <div class="card">
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -43,7 +40,6 @@
                     </div>
                 </div>
             </div> -->
-        </div>
     </div>
     <div class="upbtn">
         <i class="bi bi-arrow-up-short"></i>

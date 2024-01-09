@@ -75,6 +75,8 @@ function displayMovies(response) {
   });
 }
 
+
+//자동 스크롤 버튼
 const upbtns = document.querySelector('.upbtn');
 let scrolllength = 0;
 console.log(upbtns);
@@ -96,6 +98,13 @@ upbtns.addEventListener('click', function(){
     behavior: "smooth"
   }); //매소드() 안에 객체(배열)
 });
+//업버튼을 지정해서 불러오고
+//스크롤의 길이를 저장할 변수 scrolllength = window.scrollY 지정
+//window.addeventListner('scroll',  function () {) 이벤트 감지 스크롤 했을때 스크롤의 길이를 측정
+//스크롤 길이가 570을 넘어가면 업스크롤 아이콘 표시.
+//업 버튼을 클릭했을 때 window.scrollTo 보내라 윈도우 스크롤을
 
+
+//TIL 에다가 defur 안넣었을때 로딩 안되는 오류 작성하자..
 
 
